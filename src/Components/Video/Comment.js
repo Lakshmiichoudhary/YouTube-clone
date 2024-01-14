@@ -1,11 +1,126 @@
-import React from 'react'
+import React from "react";
+
+const commentsData = [
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hey heloo ,hey hello",
+    replies: [],
+  },
+  {
+    name: "Lakshmi",
+    text: "hiiiiiiiiiiii",
+    replies: [
+      {
+        name: "Lakshmi",
+        text: "Heloooooooooo",
+        replies: [],
+      },
+    {
+      
+        name: "Lakshmi",
+        text: "hey heloo ,hey hello",
+        replies: [],
+      
+    }  
+  ]}  
+      
+];
+
+const CommentText = ({ data }) => {
+  const { name, text, replies } = data;
+  return (
+    <div className="flex shadow-sm bg-slate-700 p-2 rounded-lg my-2 ">
+      <img
+        className="w-12 h-12"
+        alt="user"
+        src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+      />
+      <div className="px-3 ">
+        <p className="font-bold ">{name}</p>
+        <p>{text}</p>
+      </div>
+    </div>
+  );
+};
+
+const CommentsList = ({ comments }) => {
+  return comments.map((comment, index) => (
+    <div key={index}>
+      <CommentText data={comment} />
+      <div className="pl-5 border border-l-black ml-5">
+        <CommentsList comments={comment.replies} />
+      </div>
+    </div>
+  ));
+};
 
 const Comment = () => {
   return (
-    <div>
-      <h1 className='text-white m-4 font-bold text-2xl border-b border-b-white'>Comments</h1>
+    <div className="m-5 p-2">
+      <h1 className="text-2xl font-bold text-white">Comments</h1>
+      <CommentsList comments={commentsData} />
     </div>
-  )
-}
+  );
+};
 
-export default Comment
+export default Comment;

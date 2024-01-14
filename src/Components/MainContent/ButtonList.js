@@ -9,7 +9,7 @@ const ButtonList = () => {
     ]
     
   return (
-    <div className='flex '>
+    <div className='overflow-hidden flex '>
         {buttontype.map((button,index)=>(
         <Button key={index} name={button} />))} 
     </div>

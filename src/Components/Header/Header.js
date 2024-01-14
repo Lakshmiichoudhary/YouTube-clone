@@ -38,14 +38,14 @@ const Header = () => {
 
   return (
     <div className='grid grid-flow-col '>
-        <div className='flex col-span-1 p-3 '>
-            <img className='h-20 cursor-pointer' onClick={menuHandler} src={menu} alt="menu" />
-            <img  className="h-20" src={logo} alt="logo"/>
+        <div className='flex md:col-span-1 md:p-3'>
+            <img className='md:h-20 cursor-pointer' onClick={menuHandler} src={menu} alt="menu" />
+            <img  className="h-10 md:mt-0 mt-6  md:h-20" src={logo} alt="logo"/>
         </div>
-        <div className='p-2 col-span-10 '>
-          <div className=' m-4  text-center flex'>
+        <div className='md:p-2 md:col-span-10 '>
+          <div className='m-4  text-center flex'>
             <input className='p-2 ml-20 w-2/4 border border-blue-900 rounded-l-full
-            text-white text-2xl font-bold bg-black '
+            text-white md:text-2xl font-bold bg-black '
             type='text' 
             placeholder='search'
             value={searchQuery}

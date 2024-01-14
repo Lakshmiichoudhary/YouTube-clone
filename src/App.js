@@ -28,7 +28,7 @@ function App() {
 
   return (
     <Provider store={store}>
-    <div className='bg-black w-screen h-full'>
+    <div className='bg-black w-full h-full md:w-screen md:h-full'>
       <Header/>
       <RouterProvider router={appRouter} />
     </div>

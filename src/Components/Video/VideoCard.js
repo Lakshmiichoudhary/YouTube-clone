@@ -8,7 +8,7 @@ const VideoCard = ({info}) => {
     const {snippet,statistics} = info;
     const {thumbnails,title,channelTitle} = snippet; 
   return (
-    <div className='text-white mx-2 w-96 h-auto mt-2 '>
+    <div className='text-white mx-2 w-50 md:w-96 h-auto mt-2 '>
         <img className='rounded-lg' alt='thumbnail' src={thumbnails.high.url} />
         <ul className='p-2'>
             <li className='font-bold'>{title}</li>
