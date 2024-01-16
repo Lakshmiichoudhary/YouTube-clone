@@ -5,7 +5,7 @@ const ButtonList = () => {
 
     const buttontype = [
         "All","Music","Game","Mixes","Lo-fi","IndianPopMusic","Comedy",
-        "Fashion","Blogs","New to You","Travel","reactJs","DSA","Play"
+        "Fashion","Blogs","New to You"
     ]
     
   return (

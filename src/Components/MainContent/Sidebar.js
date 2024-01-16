@@ -5,7 +5,7 @@ const Sidebar = () => {
     const isMenuTriger = useSelector((store) => store.app.isMenuTriger)
 
   return !isMenuTriger ? null : (
-    <div className='text-white m-4 p-2 space-y-28 font-bold hidden md:inline-block'>
+    <div className='text-white m-4 p-2 space-y-20 font-bold hidden md:inline-block'>
       <div>
         <h1>home</h1>
       </div>

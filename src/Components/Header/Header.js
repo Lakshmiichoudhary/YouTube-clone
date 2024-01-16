@@ -43,7 +43,7 @@ const Header = () => {
             <img  className="h-10 md:mt-0 mt-6  md:h-20" src={logo} alt="logo"/>
         </div>
         <div className='md:p-2 md:col-span-10 '>
-          <div className='m-4  text-center flex'>
+          <div className='m-4 mx-8 text-center flex'>
             <input className='p-2 ml-20 w-2/4 border border-blue-900 rounded-l-full
             text-white md:text-2xl font-bold bg-black '
             type='text' 
@@ -53,8 +53,8 @@ const Header = () => {
             onFocus={() => setShowSuggestiond(true)}
             onBlur={() => setShowSuggestiond(false)}
             />
-            <button className='p-3 border border-gray-500 rounded-r-full bg-slate-600 '>
-              <img className='w-10' src={search} alt='search' />
+            <button className='p-2 border border-gray-500 rounded-r-full bg-slate-600 '>
+              <img className='w-8' src={search} alt='search' />
             </button>
           </div>
             {showSuggestions && (<div className='text-white absolute ml-32 bg-slate-800 px-5 w-[37rem] rounded-lg 

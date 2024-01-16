@@ -16,7 +16,6 @@ const WatchVideo = () => {
   const getVideos = async () => {
     const data = await fetch(youTube_Key2)
     const json = await data.json()
-    console.log(json)
     setVideos(json.items)
   }
 
@@ -30,10 +29,10 @@ const WatchVideo = () => {
 
   return (
     <div>
-      <div className="m-6 md:ml-24 rounded-lg border border-gray-900 md:flex">
+      <div className="m-6 md:ml-15 rounded-lg border border-gray-900 md:flex">
       <div>
         <iframe 
-        className="w-full h-56 md:w-[70rem] md:h-[30rem]"
+        className="w-full h-56 md:w-[50rem] md:h-[25rem]"
         src={"https://www.youtube.com/embed/" + searchParam.get("v")} 
         title="YouTube video player" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
